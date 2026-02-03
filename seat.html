@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Select Seat</title>
+    <link rel="shortcut icon" href="image/EasyGo_Bd.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+         <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+        <ul class="nav-links">
+            <li><a href="index.html"><img src="./image/home12.png" alt="Home" > Home</a></li>
+            
+            <li><a href="search.html"><img src="./image/book.png" alt="Book Ticket">Book Ticket</a></li>
+
+            <li><a href="login.html"><img src="./image/login.png" alt="login">Login</a></li>
+
+            <li><a href="history.html"><img src="./image/history.png" alt="history">History</a></li>
+
+            <li><a href="contact.html"><img src="./image/contact.png" alt="Contact">Contact us</a></li>
+        </ul>
+    </nav>
+    <section class="seat_section">
+        <h2 class="center">Select Your Seat</h2>
+        <div class="seats">
+            <div class="seat booked">A1</div>
+            <div class="seat booked">A2</div>
+            <div class="aisle"></div>
+            <div class="seat" onclick="selectSeat(this)">A3</div>
+            <div class="seat" onclick="selectSeat(this)">A4</div>
+
+            <div class="seat" onclick="selectSeat(this)">B1</div>
+            <div class="seat" onclick="selectSeat(this)">B2</div>
+            <div class="aisle"></div>
+            <div class="seat" onclick="selectSeat(this)">B3</div>
+            <div class="seat" onclick="selectSeat(this)">B4</div>
+            <div class="seat" onclick="selectSeat(this)">C1</div>
+            <div class="seat" onclick="selectSeat(this)">C2</div>
+            <div class="aisle"></div>
+            <div class="seat" onclick="selectSeat(this)">C3</div>
+            <div class="seat" onclick="selectSeat(this)">C4</div>
+            <div class="seat" onclick="selectSeat(this)">D1</div>
+            <div class="seat" onclick="selectSeat(this)">D2</div>
+            <div class="aisle"></div>
+            <div class="seat" onclick="selectSeat(this)">D3</div>
+            <div class="seat" onclick="selectSeat(this)">D4</div>
+            <div class="seat" onclick="selectSeat(this)">E1</div>
+            <div class="seat" onclick="selectSeat(this)">E2</div>
+            <div class="aisle"></div>
+            <div class="seat" onclick="selectSeat(this)">E3</div>
+            <div class="seat" onclick="selectSeat(this)">E4</div>
+            <div class="seat" onclick="selectSeat(this)">F1</div>
+            <div class="seat" onclick="selectSeat(this)">F2</div>
+            <div class="aisle"></div>
+            <div class="seat" onclick="selectSeat(this)">F3</div>
+            <div class="seat" onclick="selectSeat(this)">F4</div>
+            <div class="seat" onclick="selectSeat(this)">G1</div>
+            <div class="seat" onclick="selectSeat(this)">G2</div>
+            <div class="aisle"></div>
+            <div class="seat" onclick="selectSeat(this)">G3</div>
+            <div class="seat" onclick="selectSeat(this)">G4</div>
+        </div>
+
+        <p class="center">Selected Seats: <span id="count">0</span></p>
+        <p class="center">Total Price: TK<span id="total">0</span></p>
+
+        <div class="center">
+            <button class="btn-grad" onclick="goBooking()">Continue</button>
+        </div>
+
+    </section>
+    <script src="main.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

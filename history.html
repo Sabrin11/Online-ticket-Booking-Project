@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Booking History</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+         <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+        <ul class="nav-links">
+            <li><a href="index.html"><img src="./image/home12.png" alt="Home" > Home</a></li>
+        </ul>
+    </nav>
+
+    <section class="history-section">
+        <h2>Your Bookings</h2>
+        <div id="history"></div>
+    </section>
+
+    <script>
+        const list = JSON.parse(localStorage.getItem("bookingHistory")) || [];
+        const box = document.getElementById("history");
+
+        if (list.length === 0) {
+            box.innerHTML = "<p>No booking found</p>";
+        } else {
+            list.forEach(b => {
+                box.innerHTML += `
+                    <div class="history-card">
+                        <p>ID: ${b.id}</p>
+                        <p>Seats: ${b.seats.join(", ")}</p>
+                        <p>Total: TK ${b.price}</p>
+                    </div>
+                `;
+            });
+        }
+    </script>
+    <script src="script.js"></script>
+
+</body>
+</html>

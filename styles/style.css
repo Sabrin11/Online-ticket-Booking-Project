@@ -1,0 +1,413 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 20px;
+    background-color: rgb(130, 177, 215);
+}
+
+.btn-grad {
+    background: linear-gradient(to right, #085078 0%, #85D8CE 51%, #085078 100%)
+}
+.btn-grad {
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+}
+
+.btn-grad:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+/* Navbar related style */
+.navbar {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    padding: 20px 30px;
+    background-color: #abcdc9;
+    border-radius: 30px;
+}
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+.hamburger {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: rgb(26, 23, 23);
+    font-size: 16px;
+}
+
+.nav-links li a img {
+    height: 20px;
+    width: 20px;
+    margin-right: 8px;
+    background: transparent;
+}
+
+.nav-links li a:hover {
+    background-color: rgb(100, 108, 114);
+    color: white;
+    padding: 8px;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+/* Bus animation related style */
+.login-intro {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.login-intro h1,
+.login-intro p {
+    position: relative;
+    z-index: 2;    
+    text-align: center;
+}
+
+.bus {
+    position: absolute;
+    bottom: 0;
+    left: -300px;
+    width: 250px;
+    animation: busMove 6s linear infinite;
+}
+@keyframes busMove {
+    0% {
+        left: -300px;
+        z-index: 1; 
+    }
+    40% {
+        left: 40%;
+        z-index: 0;  
+    }
+    100% {
+        left: 100%;
+        z-index: 0;
+    }
+}
+
+/* Card related style */
+.feature-section {
+    padding: 60px 20px;
+    background: #6f8cb6;
+    text-align: center;
+    border-radius: 30px;
+}
+
+.feature-title {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #250707;
+}
+
+.feature-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.feature-card {
+    background: rgb(214, 214, 217);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(52, 42, 42, 0.1);
+    transition: 0.8s;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(179, 115, 115, 0.15);
+}
+
+.feature-card img {
+    width: 75px;
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    margin-bottom: 10px;
+    color: #094e8a;
+}
+
+.feature-card p {
+    font-size: 14px;
+    color: #2b2727;
+}
+.login-intro {
+    max-width: 700px;
+    margin: 60px auto 30px auto;
+    padding: 35px 25px;
+    text-align: center;
+    background: linear-gradient(135deg, #01182c, #4393d4);
+    color: white;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.login-intro h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.login-intro p {
+    font-size: 16px;
+    line-height: 1.6;
+    opacity: 2.95;
+}
+.search-box ,.a {
+    width: 300px;
+    margin: 60px auto;
+    padding: 25px;
+    background: #9c9898;
+    border-radius: 10px;
+    text-align: center;
+    background: #dadddf;
+}
+.seat.booked {
+    background-color: #e53935;
+    color: white;
+    cursor: not-allowed;
+}
+
+.search-box input,.a {
+    width: 100%;
+    padding: 10px;
+    margin: 8px auto;
+    background-color: #bed4d2;
+}
+
+.search-box button,
+.route-card button,
+.center button {
+    padding: 10px 15px;
+    color: rgb(240, 234, 234);
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    border-radius: 12px;
+}
+.nav-links img ,.register{
+    height: 25px;
+    width: 25px;
+    background: transparent;
+}
+.route-card {
+    width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #ccc;
+    background-color: #e0dce0;
+}
+.route-card:hover{
+    background-color: rgb(135, 165, 65);
+    cursor: pointer;
+}
+.center {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.route-section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.seats {
+    display: grid;
+    grid-template-columns: repeat(5, 70px);
+    gap: 10px;
+    justify-content: center;
+}
+
+.seat {
+    border: 1px solid #2e2a2a;
+    padding: 10px;
+    background-color: #abcdc9;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 15px;
+}
+.aisle {
+    display: inline-block;
+    width: 40px;
+}
+
+.seat.selected {
+    background: rgb(36, 86, 88);
+    color: rgb(231, 217, 217);
+}
+
+/* login related style */
+.login-section {
+    max-width: 400px;
+    margin: 80px auto;
+    padding: 30px;
+    background: #dadddf;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.login-section h2 {
+    margin-bottom: 20px;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 12px;
+    background-color: #bed4d2;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #cab9b9;
+}
+
+.note {
+    margin-top: 10px;
+}
+
+/* contact related style */
+.contact-section {
+    max-width: 600px;
+    margin: 80px auto;
+    padding: 30px;
+    background: #a8bbce;
+    border-radius: 12px;
+}
+
+.contact-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    color: rgb(28, 27, 27);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: #92a393;
+}
+
+/* Registration related style */
+.register-section {
+    max-width: 420px;
+    margin: 80px auto;
+    padding: 30px;
+    background: #8ea0b1;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.register-section h2 {
+    margin-bottom: 20px;
+}
+
+.register-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.btn-group {
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+.btn-group .btn-grad {
+    width: 48%;
+}
+
+/* Responsive design */
+@media screen and (max-width:576px) {
+    .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #abcdc9;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    padding: 8px;
+    border-radius: 10px;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .hamburger {
+    display: block;
+  }
+  .login-intro {
+        height: 200px; 
+    }
+    .login-intro h1 {
+        font-size: 22px;
+    }
+    .login-intro p {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+    .bus {
+        width: 150px;
+        animation: busMoveMobile 6s linear infinite;
+    }
+    @keyframes busMoveMobile {
+        0% { 
+            left: -180px; z-index: 1; 
+        }
+        40% { 
+            left: 30%; z-index: 0; 
+        }
+        100% {
+             left: 100%; z-index: 0; 
+            }
+    }
+
+
+}
